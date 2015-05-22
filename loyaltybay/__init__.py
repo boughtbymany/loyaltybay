@@ -65,6 +65,8 @@ class LoyaltyBayAPI():
 
             if 'data' in response_data:
                 data = response_data['data']
+            else:
+                data = response_data
 
         return data
 
