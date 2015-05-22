@@ -90,7 +90,7 @@ class LoyaltyBayAPI():
 
         return result
 
-    def choices(self, uuid, publisher_campaign_identifier, 
+    def create_choice(self, uuid, publisher_campaign_identifier, 
         advertiser_campaign_identifier):
         response = self._call('POST', '/choices', data={
             'uuid': uuid,
@@ -104,7 +104,7 @@ class LoyaltyBayAPI():
 
         return False
 
-    def conversions(self, uuid, publisher_campaign_identifier, email, name, 
+    def create_conversion(self, uuid, publisher_campaign_identifier, email, name, 
         postcode=None, advertiser_campaign_identifier=None):
         response = self._call('POST', '/conversions', data={
             'uuid': uuid,
