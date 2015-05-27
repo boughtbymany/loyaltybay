@@ -15,15 +15,8 @@ def main():
         'YOUR_API_KEY'
     )
 
-    publisher_campaigns = lb.publisher_campaigns()
-
-    for campaign in publisher_campaigns:
-        print(campaign['identifier'])
-
-    if len(publisher_campaigns) == 0:
-        return 
-
-    identifier = publisher_campaigns[0]['identifier']
+    # AF Hi nick, I set this to none because you would need to specify this from e.g. env
+    identifier = None
 
     campaign = lb.publisher_campaign(identifier, '12345')
 
