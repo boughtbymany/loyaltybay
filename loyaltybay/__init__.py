@@ -72,14 +72,7 @@ class LoyaltyBayAPI():
 
     # API Methods
 
-    def publisher_campaigns(self):
-        response = self._call('GET', '/publisher_campaigns')
-        result = self._process(response)
 
-        if 'publisher_campaigns' in result:
-            return result['publisher_campaigns']
-
-        return result
 
     def publisher_campaign(self, campaign, uuid):
         response = self._call('GET', '/publisher_campaigns/%s' % campaign, params={
